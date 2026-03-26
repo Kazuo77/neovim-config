@@ -8,6 +8,7 @@ return {
     },
     lazy = false, -- neo-tree loads itself
     config = function()
-     vim.keymap.set('n','<C-n>', ':Neotree filesystem reveal left<CR>', {}) 
+      --[[vim.keymap.set('n','<C-n>', ':Neotree filesystem reveal left<CR>', {})]]--
+     vim.keymap.set('n','<C-n>', ':Neotree float reveal left toggle<CR>', {}) 
   end
 }
