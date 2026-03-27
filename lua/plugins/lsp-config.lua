@@ -6,7 +6,13 @@ return {
 	},
 	config = function()
 		-- Setup Mason first
-		require("mason").setup()
+		require("mason").setup(
+    {
+  registries = {
+    "github:Crashdummyy/mason-registry",
+    "github:mason-org/mason-registry",
+  },
+})
 
 		-- Setup mason-lspconfig with automatic installation
 		require("mason-lspconfig").setup({
@@ -46,6 +52,7 @@ return {
     vim.lsp.enable("clangd")
     vim.lsp.enable("ts_ls")
     vim.lsp.enable("tailwindcss")
+    vim.lsp.enable("roslyn")
 		-- Keybindings
 		vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
